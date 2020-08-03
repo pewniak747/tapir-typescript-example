@@ -1,0 +1,20 @@
+{
+  "name": "tapir-typescript-example",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "client": "node dist/index.js",
+    "dtsgen": "dtsgen --url http://localhost:8080/apidoc/swagger.yml > client/apidoc.d.ts"
+  },
+  "author": "Tomasz Pewiński",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/isomorphic-fetch": "0.0.35",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
