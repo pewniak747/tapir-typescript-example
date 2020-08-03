@@ -49,8 +49,8 @@ However, the communication between them is not statically typed.
 Errors can still happen at runtime if e.g. we reference a non-existent field from the response JSON, or forget to provide a required field in the request JSON body.
 
 This got me thinking...
-Tapir already [generates a documentation for our API](https://blog.softwaremill.com/describe-then-interpret-http-endpoints-using-tapir-ac139ba565b0), using Swagger.
-This takes a form of a YAML file.
+Tapir already [generates documentation for our API](https://blog.softwaremill.com/describe-then-interpret-http-endpoints-using-tapir-ac139ba565b0), using Swagger.
+This takes the form of a YAML file.
 If we could generate TypeScript typings from this API documentation, we would get compilation errors whenever the client uses the API incorrectly.
 Wouldn't that be great?
 
@@ -83,6 +83,6 @@ and needs to be included your project's `tsconfig.json` under `"files"` property
 
 This solution definitely isn't 100% failure-proof.
 For example, it will only verify types of JSON bodies - you can still make a mistake by requesting a wrong HTTP path or using a wrong verb (e.g. PUT instead of POST).
-However, it still provides a lot of type safety, is very simple to use and is compatible with any API that uses Swagger for documentation.
+However, it still provides a lot of type safety, is very simple to use, and is compatible with any API that uses Swagger for documentation.
 
 To see a complete example of a REST API implemented with Tapir and a TypeScript client, visit https://github.com/pewniak747/tapir-typescript-example
